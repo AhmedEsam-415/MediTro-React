@@ -4,15 +4,29 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./navbar.css";
+import logo from "../../assets/Image/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faMagnifyingGlass,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+
 const Navbars = () => {
+  const icons = <FontAwesomeIcon icon={faChevronRight} />;
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand>
+          <img src={logo} title="logo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link className="active" href="#home">
+              Home
+            </Nav.Link>
 
             <NavDropdown title="Pages" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
@@ -40,10 +54,14 @@ const Navbars = () => {
             </NavDropdown>
 
             <Nav.Link>Contact Us</Nav.Link>
-            <Nav.Link>Search</Nav.Link>
-            <Nav.Link>Icon + (+01)999 888 777</Nav.Link>
             <Nav.Link>
-              <button>Contact Us</button>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </Nav.Link>
+            <Nav.Link>
+              <FontAwesomeIcon icon={faPhone} /> (+01)999 888 777
+            </Nav.Link>
+            <Nav.Link>
+              <button>Contact Us {icons}</button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

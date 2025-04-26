@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #333 !important;
 }
 html {
   scroll-behavior: smooth;
@@ -10,6 +11,7 @@ html {
 :root {
   --main-color: #1f2278;
   --orange-color: #f17732;
+  --btn-color: #565acf;
 }
 section,
 footer,
@@ -38,6 +40,8 @@ button {
   text-align: center;
   height: 40px;
   border-radius: 4px !important;
+  outline: none;
+  border: none;
 }
 P {
   line-height: 28px;
