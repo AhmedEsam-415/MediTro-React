@@ -1,0 +1,55 @@
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import "./navbar.css";
+const Navbars = () => {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+
+            <NavDropdown title="Pages" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Other Team</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">FAQS</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">Booking</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.5">Error 404</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.6">
+                Login / Register
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Services" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Service</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Service Details
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown title="Blog" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Blogs</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Blog Details
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <Nav.Link>Contact Us</Nav.Link>
+            <Nav.Link>Search</Nav.Link>
+            <Nav.Link>Icon + (+01)999 888 777</Nav.Link>
+            <Nav.Link>
+              <button>Contact Us</button>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Navbars;
