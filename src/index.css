@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #333 !important;
+  background-color: white;
 }
 html {
   scroll-behavior: smooth;
@@ -37,9 +37,8 @@ li {
   list-style-type: none;
 }
 button {
-  text-align: center;
   height: 40px;
-  border-radius: 4px !important;
+  border-radius: 5px !important;
   outline: none;
   border: none;
 }

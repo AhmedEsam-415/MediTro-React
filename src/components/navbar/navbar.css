@@ -33,7 +33,7 @@ nav .navbar-nav button {
   text-transform: uppercase;
   font-size: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   transition: 0.3s;
 }
@@ -46,7 +46,7 @@ nav .navbar-nav button svg {
   color: var(--btn-color);
   padding: 15px;
   border-radius: 4px;
-  margin-left: 15px;
+  margin-right: -10px;
   font-size: 13px;
 }
 
