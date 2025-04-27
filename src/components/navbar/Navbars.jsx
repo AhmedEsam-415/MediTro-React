@@ -1,9 +1,9 @@
 import React from "react";
+import "./navbar.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import "./navbar.css";
 import logo from "../../assets/Image/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -57,8 +57,9 @@ const Navbars = () => {
             <Nav.Link>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </Nav.Link>
-            <Nav.Link>
-              <FontAwesomeIcon icon={faPhone} /> (+01)999 888 777
+            <Nav.Link className="tel">
+              <FontAwesomeIcon icon={faPhone} className="phone" /> (+01)999 888
+              777
             </Nav.Link>
             <Nav.Link>
               <button>Contact Us {icons}</button>

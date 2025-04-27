@@ -4,6 +4,8 @@ header {
 }
 header .info {
   margin: auto 0;
+  position: relative;
+  height: 100%;
 }
 header .info h5 {
   color: var(--btn-color);
@@ -33,9 +35,29 @@ header .info button a {
 header .info button:hover {
   opacity: 0.8;
 }
+header .info span {
+  position: absolute;
+  right: 0;
+  bottom: -40%;
+}
+header .image {
+  position: relative;
+  max-width: 100%;
+}
 header .image img {
   max-width: 100%;
   animation: mover 4s linear infinite;
+}
+
+header .image svg {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 0;
+  top: 10%;
+  border: 4px solid var(--btn-color);
+  color: transparent;
+  animation: moversvg 4s linear infinite;
 }
 
 @keyframes mover {
@@ -45,5 +67,15 @@ header .image img {
   }
   50% {
     transform: translateY(0);
+  }
+}
+
+@keyframes moversvg {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-20px);
   }
 }
